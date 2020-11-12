@@ -39,7 +39,7 @@ class AnimalController extends Controller
         $animal->espece=$request->espece;
         $animal->age=$request->age;
         $animal->save();
-        return view('show',compact('animal'));
-
+        return redirect('animal/'.$animal->id);
+        // return view('show',compact('animal'));
     }
 }
